@@ -21,7 +21,6 @@ h1 {
 .right {
     float: right;
     text-align: left;
-    display: inline-block;
     vertical-align: middle;
     width: 50%;
 }
@@ -32,10 +31,6 @@ h1 {
 
 ul {
     list-style: none;
-}
-
-.reasons {
-
 }
 
 input, select, textarea {

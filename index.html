@@ -19,7 +19,7 @@
             <div class='labels'>
                 <div class='row'>
                     <div class='labels'>
-                        <label for="name">
+                        <label id="name-label" for="name">
                             <p>Name:</p>
                         </label>
                     </div>
@@ -28,21 +28,23 @@
                     </div>
                 </div>
                 <div class='row'>
-                    <div class='labels'> <label for="email">
+                    <div class='labels'> 
+                        <label id="email-label" for="email">
                             <p>Email:</p>
                         </label>
                     </div>
                     <div class='right'>
-                        <input required type="text" name='email' id='email' placeholder=' Email'>
+                        <input required type="email" name='email' id='email' placeholder=' Email'>
                     </div>
                 </div>
                 <div class='row'>
-                    <div class='labels'> <label for="number">
+                    <div class='labels'>
+                        <label id="number-label" for="number">
                             <p>Number of calls today:</p>
                         </label>
                     </div>
                     <div class='right'>
-                        <input min="1" type="number" name='number' id='number' value="1">
+                        <input min="1" max='99' type="number" name='number' id='number' value="1" placeholder='1'>
                     </div>
                 </div>
                 <div class='row'>
@@ -51,7 +53,7 @@
                         </label>
                     </div>
                     <div class='right'>
-                        <select name="role" id="role">
+                        <select name="role" id="dropdown" name='role'>
                             <option disabled value>Select One</option>
                             <option value="clinician">Clinician</option>
                             <option value="physician">Physician</option>
@@ -68,13 +70,13 @@
                     </div>
                     <div class='right'>
                             <ul id='rating'>
-                                <li><label for="excellent"><input type="radio" name="rating"
+                                <li><label for="excellent"><input value="1" type="radio" name="rating"
                                             id="excellent"> Excellent</label></li>
-                                <li><label for="good"><input type="radio" name="rating"
+                                <li><label for="good"><input value="1" type="radio" name="rating"
                                             id="good"> Good</label></li>
-                                <li><label for="neutral"><input type="radio" name="rating"
+                                <li><label for="neutral"><input value="1" type="radio" name="rating"
                                             id="neutral"> Neutral</label></li>
-                                <li><label for="bad"><input type="radio" name="rating"
+                                <li><label for="bad"><input value="1" type="radio" name="rating"
                                             id="bad"> Bad</label></li>
                             </ul>
                         </div>
@@ -86,21 +88,21 @@
                     </div>
                     <div class='right'>
                         <ul class='reasons'>
-                            <li><label for="pw"><input type="checkbox" name="reasons" 
+                            <li><label for="pw"><input value="1" type="checkbox" name="reasons" 
                                     id="pw"> Password Reset</label></li>
-                            <li><label for="sr"><input type="checkbox" name="reasons" 
+                            <li><label for="sr"><input value="1" type="checkbox" name="reasons" 
                                     id="sr"> Catalog Request</label></li>
-                            <li><label for="err"><input type="checkbox" name="reasons" 
+                            <li><label for="err"><input value="1" type="checkbox" name="reasons" 
                                     id="err"> Error Message</label></li>
-                            <li><label for="net"><input type="checkbox" name="reasons" 
+                            <li><label for="net"><input value="1" type="checkbox" name="reasons" 
                                     id="net"> Network Connectivity</label></li>
-                            <li><label for="phones"><input type="checkbox" name="reasons" 
+                            <li><label for="phones"><input value="1" type="checkbox" name="reasons" 
                                     id="phones"> Phones & Fax</label></li>
-                            <li><label for="install"><input type="checkbox" name="reasons" 
+                            <li><label for="install"><input value="1" type="checkbox" name="reasons" 
                                     id="install"> Software Install</label></li>
-                            <li><label for="question"><input type="checkbox" name="reasons" 
+                            <li><label for="question"><input value="1" type="checkbox" name="reasons" 
                                     id="question"> Technical Question</label></li>
-                            <li><label for="other"><input type="checkbox" name="reasons" 
+                            <li><label for="other"><input value="1" type="checkbox" name="reasons" 
                                     id="other"> Other</label></li>
                         </ul>
                     </div>
@@ -115,10 +117,10 @@
                     </div>
                 </div>
 
-                <button type="submit">Submit Survey</button>
+                <button id="submit" type="submit">Submit Survey</button>
             </div>
         </form>
     </div>
 </body>
-
+<script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
 </html>
