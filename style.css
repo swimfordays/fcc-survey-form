@@ -9,5 +9,13 @@ h1 {
 #form-container {
     width: 70%;
     margin: auto;
-    background-color: darkgray;
+}
+
+.labels {
+    display: inline-block;
+    width: 40%;
+}
+
+.right {
+    float: right;
 }

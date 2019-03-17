@@ -1,17 +1,79 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="bootstrap.min.css"> <!--Darkly bootswatch theme @ https://bootswatch.com/-->
+    <link rel="stylesheet" href="bootstrap.min.css">
+    <!--Darkly bootswatch theme @ https://bootswatch.com/-->
     <link rel="stylesheet" href="style.css">
     <title>IT Help Desk Survey</title>
 </head>
+
 <body>
-    <h1>Help Desk Survey</h1>
+    <h1 id='title'>Help Desk Survey</h1>
     <div id='form-container'>
-        Hello Gio
+        <p id='description'>How did IT help you today?</p>
+        <form id='survey-form' action="/submit-survey-form">
+            <div class='labels'>
+                <div class='row'>
+                    <div class='labels'>
+                        <label for="name">
+                            <p>Name:</p>
+                        </label>
+                    </div>
+                    <div class='right'>
+                        <input autofocus required type="text" name='name' id='name' placeholder=' First & Last'>
+                    </div>
+                </div>
+                <div class='row'>
+                    <div class='labels'> <label for="email">
+                            <p>Email:</p>
+                        </label>
+                    </div>
+                    <div class='right'>
+                        <input required type="text" name='email' id='email' placeholder=' Email'>
+                    </div>
+                </div>
+                <div class='row'>
+                    <div class='labels'> <label for="number">
+                            <p>Number of calls today:</p>
+                        </label>
+                    </div>
+                    <div class='right'>
+                        <input min="1" type="number" name='number' id='number' value="1">
+                    </div>
+                </div>
+                <div class='row'>
+                    <div class='labels'> <label for="role">
+                            <p>What is your job role?</p>
+                        </label>
+                    </div>
+                </div>
+                <div class='row'>
+                    <div class='labels'> <label for="rating">
+                            <p>How would you rate your call?</p>
+                        </label>
+                    </div>
+                </div>
+                <div class='row'>
+                    <div class='labels'> <label for="reason">
+                            <p>What was the reason for your call? (Check any applicable)</p>
+                        </label>
+                    </div>
+                </div>
+                <div class='row'>
+                    <div class='labels'> <label for="comments">
+                            <p>Comments about your experience:</p>
+                        </label>
+                    </div>
+                </div>
+
+                <button type="submit">Submit Survey</button>
+            </div>
+        </form>
     </div>
 </body>
+
 </html>
