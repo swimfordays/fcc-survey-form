@@ -9,6 +9,8 @@ h1 {
 #form-container {
     width: 70%;
     margin: auto;
+    background-color: gray;
+    border-radius: 3px;
 }
 
 .labels {
@@ -18,4 +20,25 @@ h1 {
 
 .right {
     float: right;
+    text-align: left;
+    display: inline-block;
+    vertical-align: middle;
+    width: 50%;
+}
+
+.radio {
+    text-align: justify;
+}
+
+ul {
+    list-style: none;
+}
+
+.reasons {
+
+}
+
+input, select, textarea {
+    border-radius: 7px;
+    box-shadow: 0.5px 0.5px whitesmoke;
 }

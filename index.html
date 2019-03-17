@@ -15,7 +15,7 @@
     <h1 id='title'>Help Desk Survey</h1>
     <div id='form-container'>
         <p id='description'>How did IT help you today?</p>
-        <form id='survey-form' action="/submit-survey-form">
+        <form id='survey-form' method="POST" action="./submit.html">
             <div class='labels'>
                 <div class='row'>
                     <div class='labels'>
@@ -50,23 +50,68 @@
                             <p>What is your job role?</p>
                         </label>
                     </div>
+                    <div class='right'>
+                        <select name="role" id="role">
+                            <option disabled value>Select One</option>
+                            <option value="clinician">Clinician</option>
+                            <option value="physician">Physician</option>
+                            <option value="technician">Technician</option>
+                            <option value="registrar">Registrar</option>
+                            <option value="administrator">Administrator</option>
+                        </select>
+                    </div>
                 </div>
                 <div class='row'>
                     <div class='labels'> <label for="rating">
                             <p>How would you rate your call?</p>
                         </label>
                     </div>
+                    <div class='right'>
+                            <ul id='rating'>
+                                <li><label for="excellent"><input type="radio" name="rating"
+                                            id="excellent"> Excellent</label></li>
+                                <li><label for="good"><input type="radio" name="rating"
+                                            id="good"> Good</label></li>
+                                <li><label for="neutral"><input type="radio" name="rating"
+                                            id="neutral"> Neutral</label></li>
+                                <li><label for="bad"><input type="radio" name="rating"
+                                            id="bad"> Bad</label></li>
+                            </ul>
+                        </div>
                 </div>
                 <div class='row'>
                     <div class='labels'> <label for="reason">
                             <p>What was the reason for your call? (Check any applicable)</p>
                         </label>
                     </div>
+                    <div class='right'>
+                        <ul class='reasons'>
+                            <li><label for="pw"><input type="checkbox" name="reasons" 
+                                    id="pw"> Password Reset</label></li>
+                            <li><label for="sr"><input type="checkbox" name="reasons" 
+                                    id="sr"> Catalog Request</label></li>
+                            <li><label for="err"><input type="checkbox" name="reasons" 
+                                    id="err"> Error Message</label></li>
+                            <li><label for="net"><input type="checkbox" name="reasons" 
+                                    id="net"> Network Connectivity</label></li>
+                            <li><label for="phones"><input type="checkbox" name="reasons" 
+                                    id="phones"> Phones & Fax</label></li>
+                            <li><label for="install"><input type="checkbox" name="reasons" 
+                                    id="install"> Software Install</label></li>
+                            <li><label for="question"><input type="checkbox" name="reasons" 
+                                    id="question"> Technical Question</label></li>
+                            <li><label for="other"><input type="checkbox" name="reasons" 
+                                    id="other"> Other</label></li>
+                        </ul>
+                    </div>
                 </div>
                 <div class='row'>
                     <div class='labels'> <label for="comments">
                             <p>Comments about your experience:</p>
                         </label>
+                    </div>
+                    <div class='right'>
+                        <textarea name="comments" id="comments" cols="25" rows="3" placeholder=" . . ."></textarea>
                     </div>
                 </div>
 
